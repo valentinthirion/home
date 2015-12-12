@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <menuitem name="Home" id="base.menu_base_home" groups=""/>
+    </data>
+</openerp>
