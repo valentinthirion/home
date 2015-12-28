@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="appliances_group_tree_view">
+            <field name="name">appliances_group.tree</field>
+            <field name="model">home.appliances.group</field>
+            <field name="arch" type="xml">
+                <tree string="Appliances">
+                    <field name="name"/>
+                    <field name="appliances" widget="many2many"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="appliances_group_form_view">
+            <field name="name">appliances_group.form</field>
+            <field name="model">home.appliances.group</field>
+            <field name="arch" type="xml">
+                <form string="Group form">
+                    <sheet>
+                        <h1><field name="name" /></h1>
+                        <group>
+                            <field name="appliances">
+                                <tree>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="appliances_group_list">
+            <field name="name">Appliances Groups</field>
+            <field name="res_model">home.appliances.group</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="appliances_group_menu" name="Groups"
+                  parent="base.menu_base_home_setup" action="appliances_group_list"/>
+    </data>
+</openerp>

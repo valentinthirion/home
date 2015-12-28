@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="appliance_tree_view">
+            <field name="name">appliance.tree</field>
+            <field name="model">home.appliance</field>
+            <field name="arch" type="xml">
+                <tree string="Appliances">
+                    <field name="name"/>
+                    <field name="code" />
+                    <field name="groups"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="appliance_form_view">
+            <field name="name">appliance.form</field>
+            <field name="model">home.appliance</field>
+            <field name="arch" type="xml">
+                <form string="appliance form">
+                    <sheet>
+                        <field name="image" widget='image' class="oe_avatar" options='{"preview_image":"image_medium"}'/>
+                        <div class="oe_title">
+                            <h1><field name="name" /></h1>
+                            <h2><field name="status" readonly="1"></field></h2>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                                <field name="home_id"/>
+                                <field name="groups" widget="many2many_tags"/>
+                            </group>
+                            <group>
+                                <field name="type"/>
+                                <field name="ip"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="description"/>
+                        </group>
+                        <group>
+                            <field name="methods">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="url"/>
+                                    <field name="last_executed"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="appliance_list">
+            <field name="name">Appliance</field>
+            <field name="res_model">home.appliance</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="appliance_menu" name="Appliance"
+                  parent="base.menu_base_home_setup" action="appliance_list"/>
+    </data>
+</openerp>
