@@ -6,6 +6,9 @@
             <field name="model">home.appliance.method</field>
             <field name="arch" type="xml">
                 <form string="method form">
+                    <header>
+                        <button string="Launch Method" icon="gtk-execute" name="launch_method" type="object"/>
+                    </header>
                     <sheet>
                         <group>
                             <field name="name" />

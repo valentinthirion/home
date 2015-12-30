@@ -37,6 +37,7 @@
                             <field name="modes">
                                 <tree>
                                     <field name="name"/>
+                                    <button string="" icon="gtk-execute" name="set_mode" type="object"/>
                                 </tree>
                             </field>
                         </group>

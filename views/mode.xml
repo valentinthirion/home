@@ -7,6 +7,7 @@
             <field name="arch" type="xml">
                 <tree string="Modes">
                     <field name="name"/>
+                    <button string="" icon="gtk-print" name="set_mode" type="object"/>
                 </tree>
             </field>
         </record>
@@ -15,6 +16,9 @@
             <field name="model">home.mode</field>
             <field name="arch" type="xml">
                 <form string="mode form">
+                    <header>
+                        <button string="Set Mode" icon="gtk-execute" name="set_mode" type="object"/>
+                    </header>
                     <sheet>
                         <div class="oe_title">
                             <h1><field name="name" /></h1>
@@ -25,6 +29,7 @@
                                 <tree>
                                     <field name="appliance_id"/>
                                     <field name="name"/>
+                                    <button string="" icon="gtk-execute" name="launch_method" type="object"/>
                                 </tree>
                             </field>
                         </group>

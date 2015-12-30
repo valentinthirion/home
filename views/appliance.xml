@@ -43,6 +43,7 @@
                                     <field name="name"/>
                                     <field name="url"/>
                                     <field name="last_executed"/>
+                                    <button string="" icon="gtk-execute" name="launch_method" type="object"/>
                                 </tree>
                             </field>
                         </group>
