@@ -11,3 +11,4 @@ class home(models.Model):
 
     appliances = fields.One2many('home.appliance', 'home_id', string="Appliances")
     groups = fields.One2many('home.appliances.group', 'home_id', string="Groups")
+    modes = fields.One2many('home.mode', 'home_id', string="Modes")

@@ -11,7 +11,10 @@
     'website': 'http://www.medineo.be',
     'depends': ['report'],
     'data': [
-        'views/home_menus.xml',
+        'views/home.xml',
+        'views/appliance.xml',
+        'views/appliances_group.xml',
+        'views/mode.xml',
     ],
     'demo': [],
     'test': [],

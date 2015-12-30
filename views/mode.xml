@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="mode_tree_view">
+            <field name="name">mode.tree</field>
+            <field name="model">home.mode</field>
+            <field name="arch" type="xml">
+                <tree string="Modes">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="mode_form_view">
+            <field name="name">mode.form</field>
+            <field name="model">home.mode</field>
+            <field name="arch" type="xml">
+                <form string="mode form">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1><field name="name" /></h1>
+                            <h2><field name="home_id" /></h2>
+                        </div>
+                        <group>
+                            <field name="methods">
+                                <tree>
+                                    <field name="appliance_id"/>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="mode_list">
+            <field name="name">Modes</field>
+            <field name="res_model">home.mode</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="mode_menu" name="Modes"
+                  parent="base.menu_base_home_setup" action="mode_list"/>
+    </data>
+</openerp>

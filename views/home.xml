@@ -34,6 +34,11 @@
                                     <field name="name"/>
                                 </tree>
                             </field>
+                            <field name="modes">
+                                <tree>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
                         </group>
                     </sheet>
                 </form>
