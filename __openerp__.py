@@ -15,6 +15,7 @@
         'views/appliance.xml',
         'views/appliances_group.xml',
         'views/mode.xml',
+        'views/method.xml',
     ],
     'demo': [],
     'test': [],

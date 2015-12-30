@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="appliance_method_form_view">
+            <field name="name">method.form</field>
+            <field name="model">home.appliance.method</field>
+            <field name="arch" type="xml">
+                <form string="method form">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="appliance_id"/>
+                            <field name="url"/>
+                            <field name="last_executed"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>
